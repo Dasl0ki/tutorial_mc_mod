@@ -1,5 +1,6 @@
 package com.loki.tutorialmod;
 
+import com.loki.tutorialmod.item.ModItems;
 import com.loki.tutorialmod.proxy.CommonProxy;
 import com.loki.tutorialmod.tab.CreativeTabTutorial;
 import net.minecraft.creativetab.CreativeTabs;
@@ -27,6 +28,7 @@ public class TutorialMod {
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         tabTutorial = new CreativeTabTutorial(CreativeTabs.getNextID(), "tab_tutorial");
+        ModItems.preInit();
         proxy.preInit(event);
 
     }
