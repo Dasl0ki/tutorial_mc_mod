@@ -38,14 +38,14 @@ public class BlockTutorialBlock extends Block {
 
     @Override
     public void onBlockDestroyedByPlayer(World worldIn, BlockPos pos, IBlockState state) {
-        worldIn.setBlockState(pos, Blocks.TNT.getDefaultState())
+        worldIn.setBlockState(pos, Blocks.TNT.getDefaultState());
         super.onBlockDestroyedByPlayer(worldIn, pos, state);
 
     }
 
     @Override
     public void onBlockDestroyedByExplosion(World worldIn, BlockPos pos, Explosion explosionIn) {
-        worldIn-spawnAsEntity(new EntityBlaze(worldIn));
+        worldIn.spawnEntityInWorld(new EntityBlaze(worldIn));
         super.onBlockDestroyedByExplosion(worldIn, pos, explosionIn);
     }
 

@@ -1,7 +1,6 @@
 package com.loki.tutorialmod.block;
 
 import com.loki.tutorialmod.TutorialMod;
-import com.loki.tutorialmod.item.itemTutorialItem;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
@@ -9,16 +8,17 @@ import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModBlocks {
 
     public static Block tutorialBlock;
+    public static Block derpBlock;
 
     public static void preInit() {
 
         tutorialBlock = new BlockTutorialBlock(Material.ROCK, "tutorial_block");
+        derpBlock = new BlockDerpBlock(Material.ROCK, "derp_block");
 
         registerBlocks();
 
@@ -26,6 +26,7 @@ public class ModBlocks {
 
     public static void registerBlocks() {
         registerBlock(tutorialBlock, "tutorial_block");
+        registerBlock(derpBlock, "derp_block");
 
     }
 
@@ -40,6 +41,7 @@ public class ModBlocks {
     public static void registerRenders() {
 
         registerRender(tutorialBlock);
+        registerRender(derpBlock);
 
     }
 

@@ -7,4 +7,5 @@ itemGroup.tab_tutorial=Tutorial Mod
 item.tutorial_item.name=Tutorial Item
 
 #Blocks
-item.tutorial_block.name=Tutorial Block
+tile.tutorial_block.name=Tutorial Block
+tile.derp_block.name=Derp Block
