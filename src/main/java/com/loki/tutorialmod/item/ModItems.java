@@ -15,7 +15,7 @@ public class ModItems {
 
     public static void preInit() {
 
-        tutorialItem = new itemTutorialItem(EnumHelper.addToolMaterial(), "tutorial_item");
+        tutorialItem = new itemTutorialItem(EnumHelper.addToolMaterial("TUTORIAL", 3, 1, 8.0F, 10.0F, 10), "tutorial_item");
 
         registerItems();
 

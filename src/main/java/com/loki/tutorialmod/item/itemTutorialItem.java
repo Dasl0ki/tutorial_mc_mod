@@ -1,10 +1,11 @@
 package com.loki.tutorialmod.item;
 
 import com.loki.tutorialmod.TutorialMod;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.EnumRarity;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.util.ActionResult;
@@ -46,6 +47,16 @@ public class itemTutorialItem extends ItemSword {
     }
 
     @Override
+    public boolean onBlockDestroyed(ItemStack stack, World worldIn, IBlockState state, BlockPos pos, EntityLivingBase entityLiving) {
+        return true;
+    }
+
+    @Override
+    public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker) {
+        return true;
+    }
+
+    @Override
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced) {
         tooltip.add("Item Tooltip");
         tooltip.add("Baum");
@@ -59,6 +70,9 @@ public class itemTutorialItem extends ItemSword {
 
     @Override
     public boolean hasEffect(ItemStack stack) {
+
         return true;
     }
+
+
 }
