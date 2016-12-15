@@ -1,5 +1,6 @@
 package com.loki.tutorialmod.proxy;
 
+import com.loki.tutorialmod.block.ModBlocks;
 import com.loki.tutorialmod.item.ModItems;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -16,6 +17,7 @@ public class ClientProxy extends CommonProxy{
     public void init(FMLInitializationEvent event) {
 
         ModItems.registerRenders();
+        ModBlocks.registerRenders();
 
     }
 

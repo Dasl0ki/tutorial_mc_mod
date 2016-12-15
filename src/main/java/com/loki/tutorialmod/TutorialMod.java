@@ -1,5 +1,6 @@
 package com.loki.tutorialmod;
 
+import com.loki.tutorialmod.block.ModBlocks;
 import com.loki.tutorialmod.item.ModItems;
 import com.loki.tutorialmod.proxy.CommonProxy;
 import com.loki.tutorialmod.tab.CreativeTabTutorial;
@@ -29,6 +30,7 @@ public class TutorialMod {
     public void preInit(FMLPreInitializationEvent event) {
         tabTutorial = new CreativeTabTutorial(CreativeTabs.getNextID(), "tab_tutorial");
         ModItems.preInit();
+        ModBlocks.preInit();
         proxy.preInit(event);
 
     }
