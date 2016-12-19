@@ -18,7 +18,7 @@ public class ModBlocks {
     public static void preInit() {
 
         tutorialBlock = new BlockTutorialBlock(Material.ROCK, "tutorial_block");
-        derpBlock = new BlockDerpBlock(Material.ROCK, "derp_block");
+        derpBlock = new BlockDerpBlock(Material.CLOTH, "derp_block");
 
         registerBlocks();
 
