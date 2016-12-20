@@ -16,7 +16,6 @@ public class itemYAW extends Item {
     @Override
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced) {
         tooltip.add("Moar wrenches");
-        tooltip.add("unlocal: " + stack.getUnlocalizedName().substring(5));
         super.addInformation(stack, playerIn, tooltip, advanced);
     }
 }
