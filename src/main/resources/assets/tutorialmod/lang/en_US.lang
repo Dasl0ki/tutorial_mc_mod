@@ -5,6 +5,7 @@ itemGroup.tab_tutorial=Tutorial Mod
 
 #Items
 item.tutorial_item.name=Tutorial Item
+item.item_yaw.name=Yet Another Wrench
 
 #Blocks
 tile.tutorial_block.name=Tutorial Block

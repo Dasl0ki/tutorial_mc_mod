@@ -50,12 +50,6 @@ public class BlockTutorialBlock extends Block {
     }
 
     @Override
-    public void onBlockAdded(World worldIn, BlockPos pos, IBlockState state) {
-        worldIn.createExplosion(null, pos.getX(), pos.getY(), pos.getZ(), 5F, true);
-        super.onBlockAdded(worldIn, pos, state);
-    }
-
-    @Override
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, @Nullable ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
         if(worldIn.isRemote) {
             Minecraft.getMinecraft().displayGuiScreen(new GuiInventory(playerIn));

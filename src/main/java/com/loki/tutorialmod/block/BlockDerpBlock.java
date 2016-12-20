@@ -14,6 +14,8 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
+import org.lwjgl.Sys;
+
 import javax.annotation.Nullable;
 
 /**
@@ -33,14 +35,12 @@ public class BlockDerpBlock extends Block {
     @Override
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, @Nullable ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
         if(!worldIn.isRemote) {
-            if(playerIn.isSneaking() == true) {
-                if(hand == EnumHand.MAIN_HAND) {
-                    playerIn.addChatComponentMessage(new TextComponentString("Herp Derp"));
-                    //worldIn.setBlockState(pos, Blocks.AIR.getDefaultState());
-                    worldIn.destroyBlock(pos, true);
-                }
-            }
+            //Placeholder for PlayerInteractEvent --> Sneak Right click with Wrench
+            System.out.println("Nothing to do");
         }
         return super.onBlockActivated(worldIn, pos, state, playerIn, hand, heldItem, side, hitX, hitY, hitZ);
     }
+
+
+
 }
